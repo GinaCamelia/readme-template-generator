@@ -83,11 +83,22 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    //file path to the readme file
+    const filePath = path.join(process.cwd(), fileName);
+    //convert data into a markdown string 
+    const markdown = generateMarkdown(data);
+    // write the markdown string to the file
+    fs.writeFileSync(filePath, markdown);
+    console.log(`Successfully wrote ${fileName}`);
 }
 
 // function to initialize program
 function init() {
-
+    inquirer.prompt(questions).then((data) => {
+        writeToFile('README.md', data);
+    }).catch((error) => {
+        console.log(error);
+    });
 }
 
 // function call to initialize program
