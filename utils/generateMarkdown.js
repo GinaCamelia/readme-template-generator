@@ -7,7 +7,7 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
-  - [Contributing](#contributing)
+  - [Contributors](#contributors)
   - [Test](#test)
   
   ## Description
