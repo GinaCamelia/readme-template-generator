@@ -31,12 +31,6 @@ const questions = [
 
     {
         type: 'input',
-        name: 'contents',
-        message: 'What is your table of contents?',
-    },
-
-    {
-        type: 'input',
         name: 'installation',
         message: 'How do you install and run your project?',
         default: 'npm install',
